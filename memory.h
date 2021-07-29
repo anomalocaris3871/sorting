@@ -17,3 +17,9 @@ static void printArray(int arr[], int n, const char* str = "Array") {
 
 inline int ascend(int x, int y) { return y - x; }
 inline int descend(int x, int y) { return x - y; }
+
+inline void swap(int& x, int& y) {
+	int t = x;
+	x = y;
+	y = t;
+}

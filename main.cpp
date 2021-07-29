@@ -1,6 +1,8 @@
 #include "memory.h"
 #include "insertionSort.h"
 #include "selectionSort.h"
+#include "bubbleSort.h"
+#include "ShellSort.h"
 
 
 int main() {
@@ -10,10 +12,10 @@ int main() {
 	initRandom(list, n);
 	printArray(list, n, "Original ");
 
-	selectionSortFn(list, n, ascend);
+	shellSort(list, n, ascend);
 	printArray(list, n, "Insert-As");
 
-	selectionSortFn(list, n, descend);
+	shellSort(list, n, descend);
 	printArray(list, n, "Insert-De");
 
 	return 0;

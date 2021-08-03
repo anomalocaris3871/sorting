@@ -3,20 +3,22 @@
 #include "selectionSort.h"
 #include "bubbleSort.h"
 #include "ShellSort.h"
-
+#include "mergeSort.h"
+#include "quickSort.h"
 
 int main() {
 
 	int list[16];
 	int n = 16;
+
 	initRandom(list, n);
 	printArray(list, n, "Original ");
 
-	shellSort(list, n, ascend);
-	printArray(list, n, "Insert-As");
+	quickSort(list, 0, n-1, ascend);
+	printArray(list, n, "insert-as");
 
-	shellSort(list, n, descend);
-	printArray(list, n, "Insert-De");
+	quickSort(list, 0, n - 1, descend);
+	printArray(list, n, "insert-des");
 
 	return 0;
 }

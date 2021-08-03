@@ -5,6 +5,7 @@
 #include "ShellSort.h"
 #include "mergeSort.h"
 #include "quickSort.h"
+#include "redixSort.h"
 
 int main() {
 
@@ -14,11 +15,8 @@ int main() {
 	initRandom(list, n);
 	printArray(list, n, "Original ");
 
-	quickSort(list, 0, n-1, ascend);
+	radixSort(list, n);
 	printArray(list, n, "insert-as");
-
-	quickSort(list, 0, n - 1, descend);
-	printArray(list, n, "insert-des");
 
 	return 0;
 }
